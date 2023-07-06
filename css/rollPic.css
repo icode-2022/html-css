@@ -1,0 +1,56 @@
+
+.rollPic_big {
+	margin: auto;
+	width: 1152px;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+    border-radius: 10px;
+	height: 720px;
+	margin-bottom: 30px;
+}
+
+.rollPic_list {
+	display: flex;
+	position: absolute;
+}
+
+.rollPic_list,
+.rollPic_list > li{
+	padding: 0;
+	margin: 0;
+	list-style:none; 
+}
+
+.rollPic,.rollPic>img{
+	width: 1152px;
+}
+
+.rollPic_small {
+	width: 1152px;
+	height: 90px;
+	overflow: hidden;
+	position: relative;
+	margin: auto auto 80px;
+	box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.small_list {
+	display: flex;
+	position: absolute;
+	overflow: hidden;
+	width: 2800px;
+	height: 90px;
+}
+
+.small_list>img {
+	box-sizing: border-box;
+	width: 150px;
+	height: initial;
+	margin-right: 15px;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+

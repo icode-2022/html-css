@@ -1,0 +1,85 @@
+.main_object {
+    text-align: center;
+    margin:auto;
+    width: 1300px;
+    height: 90px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 100px;
+}
+.object_title {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 180px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: nowrap;
+    margin-bottom: 160px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.object_title span img {
+    width: 60px;
+    margin-right: 5px;
+}
+
+.object_title .object_name {
+    color: black;
+    height: 100%;
+}
+
+.object_title:hover .cover_object {
+   opacity: 0.95;
+}
+.object_title:hover >span {
+    opacity: 0.2;
+ }
+
+.cover_object {
+    display: flex;
+    width: 200px;
+    height: 90px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    text-align: center;
+    flex-grow: 0.2;
+    cursor: pointer;
+    margin: 0 5px;
+    box-sizing: border-box;
+}
+.cover_object div {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin-left: 15px;
+    height: 100%;
+    color:grey;
+    fill:grey;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    left: -15px;
+}
+
+.left:hover {
+    fill:#f55b64 !important;
+    color: #f55b64 !important;
+}
+
+.right:hover {
+    fill:#f55b64 !important;
+    color: #f55b64 !important;
+}
+
+.cover_object svg {
+    width: 38px;
+}

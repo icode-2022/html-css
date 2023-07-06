@@ -1,0 +1,128 @@
+.price {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 120px;
+    margin-bottom: 160px;
+    text-align: center;
+}
+
+.price h2 {
+    font: 36px -apple-system;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 50px;
+}
+
+.price-box {
+    display: flex;
+    justify-content: center;
+}
+
+.price-box1, .price-box2 {
+    width: 400px;
+    background: linear-gradient(90deg, rgba(253,106,79,.02),rgba(252,158,35,.02));
+    box-shadow: 0 8px 16px rgb(253 122 67 / 8%);
+    margin: 0 45px;
+    border-radius: 16px;
+}
+
+.price-box1 div:nth-child(1) {
+    background: linear-gradient(90deg,#fd6a4f,#fc9e23);
+    height: 124px;
+    border-radius: 16px 16px 0 0;
+}
+
+.price-box1 div:nth-child(1) h1 {
+    border: none;
+    color: #fff;
+    padding-top: 24px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 45px;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+
+.price-box1 div:nth-child(1) span {
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.price-box1 li, .price-box2 li {
+    list-style-type:none;
+    text-align: left;
+    margin: 15px 0 15px 26%;
+    color: #181819B3;
+    font-size: 17px;
+}
+
+.price-box1 li span:nth-child(1), .price-box2 li span:nth-child(1) {
+    font-size: 19px;
+    margin-right: 15px;
+}
+
+.price-box1 input {
+    background-image: linear-gradient(90deg,#fd6a4f,#fc9e23);
+    transform: translateY(0);
+    transition: transform .2s;
+    padding: 0 24px;
+    border-radius: 1000px;
+    width: 128px;
+    height: 40px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+}
+
+.price-box2 div:nth-child(1) {
+    background: linear-gradient(90deg,#e0eafc,#cfdef3);
+    width: 100%;
+    height: 124px;
+    border-radius: 16px 16px 0 0;
+}
+
+.price-box2 h1 {
+    border: none;
+    color: #181819B3;
+    padding-top: 24px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 45px;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+
+.price-box2 div:nth-child(1) span {
+    border: none;
+    color: #181819B3;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.price-box2 input {
+    background-image: linear-gradient(90deg,#e0eafc,#cfdef3);
+    transform: translateY(0);
+    transition: transform .2s;
+    padding: 0 24px;
+    border-radius: 1000px;
+    width: 128px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+}
+
+
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
