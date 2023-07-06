@@ -1,0 +1,92 @@
+.wavy {
+  background: url(img/line.png);
+  position: relative;
+  background-size: cover;
+  height: 120px;
+}
+.footer {
+  background: #181819;
+  display: block;
+  padding: 0 0 40px 0;
+}
+.footer div:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0 44px;
+    height: 100%;
+    max-width: 1244px;
+    position: relative;
+    margin: auto;
+    will-change: transform;
+}
+.end-box1 {
+  transform: translateY(-80px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 0 44px;
+  height: 100%;
+  max-width: 1244px;
+  position: relative;
+  margin: auto;
+  will-change: transform;
+}
+.end-box1 img {
+  transform: translateX(-95px);
+  width: 110px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.end-box1 p {
+  position: absolute;
+  color: #999999;
+  font: 16px -apple-system;
+  margin-top: 50px;
+}
+.end-box1,
+.end-box2 {
+  padding: 0;
+  line-height: 23px;
+  font-size: 16px;
+  margin: 0;
+
+  flex-grow: 0.25;
+}
+.end-box2 h3 {
+  margin-top: -5px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  transform: translateX(104px);
+}
+.end-box2 a {
+  display: block;
+  transform: translateX(104px);
+  margin-bottom: 16px;
+  color: hsla(0, 0%, 100%, 0.7);
+  font-weight: 400;
+  text-decoration: none;
+}
+.end-box2 a:hover{
+    color: white;
+}
+.line-box{
+  
+        width: 100%;
+        border: #626263 solid 1px;
+}
+.end-link{
+        width: 100%;
+        color: #999999;
+        font-size: 16px;
+        margin-top: 64px;
+        margin-bottom: 24px;
+        text-align: center;
+        line-height: 20px; 
+}
+.end-link a {
+    text-decoration: none;
+    margin-left: 16px;
+    font-style: normal;
+    color: #999999;
+}

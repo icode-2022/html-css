@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0 solid green;
+}
+
+.navigation{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(250,250,253);
+    opacity: 0.9;
+    box-shadow: 0 2px 0 #F0F2F6;
+    z-index: 9999999;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    backdrop-filter: blur(2px) contrast(100%);
+}
+.navigation .navigation-thing{
+    position: relative;
+    
+    width: 1400px;
+    height: 60px;
+    margin: 0 auto;
+}
+.navigation-thing .logo-img{
+    vertical-align: middle;
+    display: inline-block;
+    width: 125px;
+    border-style: none;
+}
+.navigation-thing .nav_logo{
+    width: 145px;
+    height: 60px;
+    padding: 9px 0 9px 40px;
+}
+.navigation .navigation-thing .nav_right{
+    position: absolute;
+    left: 45%;
+    width: 50%;
+    top: 0;
+    
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+}
+.nav_right .nav_ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 9999999999;
+
+}
+.nav_right .nav_ul_li{
+    height: 60px;
+    list-style: none;
+    margin: 0 21px;
+}
+.nav_right .nav_ul_li .li-a{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 58px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: all 0.3s;
+    height: 58px;
+}
+.nav_right .li-a:hover{
+    
+    color: rgb(249,102,97);
+  }
+/* .nav_right .nav_ul_li .li-a:hover{
+    height: 58px;
+    border-bottom: 1px solid rgb(249,102,97);
+    color: rgb(249,102,97);
+} */
+.nav_right .li-a::before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  
+  height: 0;
+  border-bottom:0 solid rgb(249,102,97);
+
+  
+  }
+ 
+  /* .nav_right .li-a.active::before {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-bottom: 5px solid rgb(249, 102, 97);
+  } */
+  
+  .nav_right .li-a:hover::before {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+    border-bottom: 5px solid rgb(249,102,97);
+  
+  }
+
+  @media (max-width: 1024px) {
+    .nav_right{
+        display: none;
+    }
+  }
+  

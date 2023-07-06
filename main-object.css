@@ -1,0 +1,125 @@
+
+.main-object{
+    margin-bottom: 120px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 52px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.object-box{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 220px;
+    justify-content: center;
+    transition: all 1s;
+    z-index: 5;
+    
+}
+.object-box:hover .object-box-iv{
+    display: flex;
+    opacity: 0.9;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+
+}
+.object-box span{
+font-size: 18px;
+padding-left: 5px;
+line-height: 50px;
+}
+.cl-left:hover  span{
+   color:rgb(245,86,92);
+}
+.cl-left:hover  span svg{
+    fill: rgb(245,86,92) !important;
+}
+.cl-left span svg{
+    fill: #bfbfbf;
+}
+
+.cl-right:hover  span{
+    color:rgb(245,86,92);
+ }
+ .cl-right:hover  span svg{
+     fill: rgb(245,86,92) !important;
+ }
+ .cl-right span svg{
+     fill: #bfbfbf;
+ }
+
+.object-box-iv{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    width: 240px;
+    top:0;
+    left: 0;
+    color: #8C8C8C;
+    font-size: 14px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 50000000;
+    padding: 0 0 10px 0;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+.object-box-iv-cl{
+    line-height: 50px;
+    width: 50%;
+    height: 100%;
+}
+.header_title2{
+        /* margin-top: 150px; */
+        font-size: 36px;
+        font-family: sans-serif;
+        font-weight: 600;
+}
+.detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.detail-box{
+    padding: 40px 20px 32px;
+    vertical-align: baseline;
+    background: #ffffff;
+    box-shadow: 0 8px 32px rgb(0,0,0,0.1);
+    border-radius: 8px;
+    margin: 35px 50px;
+    width: 470px;
+}
+.small-icon {
+    font-size: 38px;
+    color: white;
+    border-radius: 10px;
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.detail-box h3 {
+    margin-bottom: -20px;
+    transform: translate(25px,-28px);
+    color: black;
+    font: 20.8px -apple-system;
+}
+.detail-box li {
+    list-style: none;
+    color: #12141C80;
+    font: 14px -apple-system;
+}
+.detail-box span {
+    margin-left: -4px;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: -39px;
+    border-radius: 10px;
+}

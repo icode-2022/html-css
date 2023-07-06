@@ -1,0 +1,154 @@
+.top{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+    width: 1244px;
+    
+    height: 2950px;
+}
+.top .container{
+    height: 465px;
+    padding-top: 50px;
+    width: 642px;
+    position: relative;
+    left: 40%;
+    transform: translate(-50%,0);
+    text-align: center;
+    float: left;
+    
+    margin-left: 10%;
+}
+.container .head_text{
+    margin-top: 75px;
+}
+.container .head_text .header_title{
+    color: #000000;
+    font: 68px -apple-system,BlinkMacSystemFont;
+    margin: 0 0 16px;
+    padding: 0 0 11px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.container .head_text .header_p{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    
+}
+.container .head_text .header_ptext{
+    font-size: 14px;
+    color: rgba(93,93,94);
+    margin-bottom: 24px;
+}
+.top .button-area{
+    padding: 0 0 60px;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.top .button-area .download_button{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 45px;
+    transition: all 2s;
+}
+
+
+.top .button-area .download_button:hover .download_button .button{
+    margin-left: 20px;
+}
+.top .button-area  .button{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 45px;
+    padding: 12px 14px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(45deg,#ff387e 6.54%,#ff386d 21.35%,#f44a53 
+    64.03%,#f35e3a 92.78%);
+}
+.download-more-system{
+    display: none;
+    text-decoration: none;
+    /* display: none; */
+    /* background-color: #F5646C; */
+    position: absolute;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 288px;
+    transition: all 2s;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
+    top: 511px;
+    left: 44.5%;
+    z-index: 999;
+    border-radius: 12px;
+    overflow: hidden;
+    
+}
+.download-more-system .system-li{
+   
+    list-style: none;
+    font-size: 16px;
+    width: 280px;
+    background-color: white;
+    transition: all 0s;
+    color: #262626;
+    padding-left: 26px;
+    height: 32px;
+    line-height: 32px;
+}
+.download-more-system .system-li a{
+    
+    text-decoration: none;
+    color: #161616;
+    
+}
+.download-more-system .system-li:hover{
+    background-color: rgb(245,245,245);
+}
+.top .container .use-web{
+    width: 172px;
+    background-color: white;
+    margin-left: 30px;
+    border-radius: 5px;
+    border: #F44A53 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: #F5646C;
+    cursor: pointer;
+    padding-left: 0;
+}
+.top .container .use-web-beta{
+    padding-left: 10px;
+    border-color: #f44a53 #f44a53 transparent transparent;
+  
+    border-top-right-radius: 5px;
+    border-style: solid;
+    border-width: 16px;
+    margin-left: -8px;
+    margin-bottom: 11.5px;
+}
+.top .container .use-web-beta-text{
+    transform: rotate(45deg);
+    float: right;
+    color: white;
+    font: 12px -apple-system;
+    margin-left: 13px;
+    margin-bottom: 20px;
+    margin-left: -36px;
+}
