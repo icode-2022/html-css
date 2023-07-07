@@ -49,7 +49,7 @@
     justify-content: center;
     margin: 60px auto;
     position: relative;
-    z-index: 980;
+    z-index: 5;
 }
 
 .learn-more a {

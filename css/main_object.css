@@ -6,6 +6,10 @@
     overflow: hidden;
     display: flex;
     margin-bottom: 100px;
+    -moz-user-select: none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
 .object_title {
     position: relative;
@@ -83,3 +87,4 @@
 .cover_object svg {
     width: 38px;
 }
+

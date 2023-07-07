@@ -89,7 +89,7 @@
 }
 
 .version_choice {
-    z-index: 10000;
+    z-index: 5;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
