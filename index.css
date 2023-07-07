@@ -1,0 +1,21 @@
+.nav li{
+    float: left;
+    width: 75px;
+    text-align: center;
+    
+}
+.nav a{
+    display:block;
+    color:black;
+}
+.nav{
+    background-color: aliceblue;
+    height:140px;
+    width:100%;
+    line-height: 80px;
+    position:absolute;
+    top:0px;
+    left:0;
+    
+}
+
