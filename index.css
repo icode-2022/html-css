@@ -1,0 +1,844 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*表示选择所有元素，包括 body、div、p、img、ul、li 等所有 HTML 元素。这段代码的作用是将所有元素的内边距
+        （padding）和外边距（margin）都设置为 0，以便更好地控制网页的布局和样式。
+
+这段代码通常被用于初始化 CSS 样式，以确保不同浏览器的默认样式不会影响网页的布局和样式。在实际开发中，通常会在这段代
+码的基础上进行进一步的样式设置，以满足特定的设计需求。*/
+
+        body {
+            font-family: sans-serif;
+            font-size: 14px;
+            background-image: url(img/5048e1efc2839bc5a286.png);
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: auto;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.85);
+            position: absolute;
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        .topNav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            height: 63px;
+            max-height: 63px;
+            width: 100%;
+            opacity: 1;
+            z-index: 9;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .backFilter {
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.04);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .sBox {
+            float: left;
+            display: inline-block;
+            width: 375px;
+            margin: 0 10px;
+        }
+
+        .navigation {
+            display: inline-block;
+            top: 0;
+            overflow: hidden;
+            height: 63px;
+            line-height: 60px;
+            margin-left: 10px;
+        }
+
+        .navigation img {
+            float: left;
+            width: 125px;
+            padding: 1% 0;
+            margin-right: 10px;
+        }
+
+        .navigation ul {
+            margin: 1px -5px 1px 0;
+            float: right;
+            list-style-type: none;
+        }
+
+        .navigation ul li {
+            transition: 0.3s;
+            display: inline-block;
+            margin: 0 26px;
+        }
+
+        .navigation ul li a {
+            transition: 0.3s;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        .navigation ul li:hover a {
+            color: rgb(248, 82, 80);
+        }
+
+        .navigation ul li:hover {
+            border-bottom: 2px solid rgb(248, 82, 80);
+        }
+
+        .section-one {
+            padding-top: 75px;
+            display: inline-block;
+            margin-bottom: -30px;
+        }
+
+        .beforeDownload {
+            display: inline-block;
+            min-width: 70%;
+            padding: 0 15px;
+        }
+
+
+        .beforeDownload h1 {
+            font-size: 68px;
+            padding: 43px 0 11px 0;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .beforeDownload p {
+            font-size: 30px;
+            font-weight: 400;
+            padding-top: 6px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            line-height: 42px;
+        }
+
+        .beforeDownload p:nth-of-type(2) {
+            font-size: 14px;
+            color: rgba(24, 24, 25, 0.7);
+            margin-bottom: 24px;
+            line-height: 20px;
+        }
+
+        .download {
+            margin: 30px auto 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .download div {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            margin-right: 25px;
+            border-radius: 5px;
+            padding: 12px 34px;
+            line-height: 25px;
+            cursor: pointer;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .download img {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            padding: 0 5px;
+        }
+
+        .download div:nth-child(1) {
+            border: none;
+            padding: 12px 11px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            background-image: linear-gradient(45deg, #ff387e 6.54%, #ff386d 21.35%, #f44a53 64.03%, #f35e3a 92.78%);
+        }
+
+        .download div a {
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .download div:nth-child(3) {
+            border: 1px solid rgb(244, 74, 83);
+            padding: 12px 34px;
+            margin: 0;
+        }
+
+        .download div:nth-child(2) a {
+            color: rgb(244, 74, 83);
+        }
+
+        div.tri-angle {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            transform: translateY(-91px) translateX(189px);
+            border: 16px solid;
+            border-top-right-radius: 5px;
+            border-color: #f44a53 #f44a53 transparent transparent;
+        }
+
+        span.tri-angle {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            transform: translateY(-88px) translateX(196px) rotate(50deg) scale(0.75);
+            position: absolute;
+            color: #fff;
+
+        }
+
+
+        .download :hover+.linkOl {
+            display: flex;
+            opacity: 1;
+            max-height: 100px;
+        }
+
+        .linkOl {
+            border-radius: 10px;
+            display: none;
+            opacity: 0;
+            max-height: 150px;
+        }
+
+
+        .linkOl ol {
+            z-index: 100;
+            margin: 0;
+            top: 100px;
+            left: 0;
+            padding: 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.08);
+            flex-direction: column;
+            text-align: left;
+            transform: translate(125px, -40px);
+            position: absolute;
+            align-items: center;
+            list-style-type: none;
+        }
+
+        .linkOl ol li {
+            border-radius: 10px;
+            padding: 5px 12px;
+        }
+
+        .linkOl ol li a {
+            padding: 5px 12px;
+            margin: -5px -12px;
+            line-height: 22px;
+        }
+
+        #toLogin {
+            position: relative;
+
+        }
+
+        .galleryBox {
+            margin: 0 auto 40px;
+            background: url(http://8.130.16.253/ce259a2d3f82db6752d8.png) no-repeat 50% 100%;
+            background-size: auto;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            height: 950px;
+        }
+
+        .gallery {
+            max-width: 1224px;
+            margin-top: -80px;
+        }
+
+        .g-top button {
+            z-index: 5;
+            color: rgba(24, 24, 25, 0.32);
+            font-size: 24px;
+            background-color: rgb(230, 231, 233);
+            display: flex;
+            cursor: pointer;
+            position: relative;
+            justify-content: center;
+            width: 38px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 1000px;
+            padding: 5px 0;
+        }
+
+        .gBtn1 {
+            top: 480px;
+            left: -56px;
+            transition: 0.2s;
+        }
+
+        .gBtn2 {
+            top: 440px;
+            right: -1236px;
+            transition: 0.2s;
+        }
+
+        .gBtn1:hover,
+        .gBtn2:hover {
+            color: rgba(24, 24, 25, 0.8);
+        }
+
+        .full {
+            max-width: 0;
+            max-height: 0;
+            transform: translate(1150px, -80px);
+        }
+
+        .full img {
+            width: 38px;
+            cursor: pointer;
+        }
+
+        .full img:hover {
+            width: 40px;
+        }
+
+        .each-image {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+
+        .each-image div {
+            transition: all 0.5s ease-out;
+        }
+
+        .each-image img {
+            width: 1224px;
+            height: 765px;
+        }
+
+        :fullscreen img {
+            width: 100%;
+            height: 100%;
+        }
+
+        :-webkit-full-screen img {
+            width: 100%;
+            height: 100%;
+        }
+
+        :-moz-full-screen img {
+            width: 100%;
+            height: 100%;
+        }
+
+        :-ms-fullscreen img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .gallery-thumbnail button {
+            height: 72px;
+        }
+
+        .gallery-thumbnail img {
+            width: 102px;
+            border-radius: 4px;
+        }
+
+        .thumbnails {
+            margin: 0;
+            padding: 5px 0;
+            display: inline-block;
+            max-width: 1210px;
+        }
+
+        .gallery-thumbnail {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-thumbnail button {
+            transition: 0.5s;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 4px;
+            border: 4px solid rgba(0, 0, 0, 0);
+        }
+
+        .gallery-thumbnail button:nth-child(1) {
+            border: 4px solid rgba(181, 154, 109, 0.6);
+        }
+
+        .gallery-thumbnail button:hover {
+            border: 4px solid rgba(181, 154, 109, 0.6);
+        }
+
+        .section-two {
+            margin: 0 auto;
+            padding: 80px 24px 120px 24px;
+            box-sizing: border-box;
+            /**/
+            max-width: 1200px;
+        }
+
+        div.section-two>div.icon {
+            margin-bottom: 64px;
+        }
+
+        .section-two>div>h2 {
+            margin: 120px 0 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .icons {
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .iconCard {
+            height: 64px;
+            min-width: 200px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+
+        .iconCard:hover .cover {
+            display: flex;
+        }
+
+        .iconCard:hover .cover>div:hover {
+            color: rgb(244, 74, 83);
+        }
+
+        span.icon-text {
+            margin-left: 16px;
+            margin-right: 8px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        span.icon-img img {
+            width: 48px;
+            border-radius: 8px;
+        }
+
+        .cover {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            opacity: 0.95;
+            background-color: rgba(255, 255, 255, 0.99);
+            box-shadow: 0 8px 16px rgb(0 0 0 / 5%);
+        }
+
+        .cover span:nth-child(1) {
+            margin-right: 6px;
+        }
+
+        .cover img {
+            padding-top: 2px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .cover div {
+            display: flex;
+            margin: 0 5px;
+        }
+
+        .cover>div>span {
+            display: flex;
+            font-size: 14px;
+            line-height: 22px;
+            padding: 20px 0;
+        }
+
+        .blocks {
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+            position: relative;
+            /* 灵活拆分 */
+            flex-wrap: wrap;
+            margin: -12px;
+        }
+
+        /*具体来说，当一个元素具有display: flex时，它的子元素会根据flex属性来动态分配可用空间。如果没有指定flex属性，子元素将按
+        照它们默认
+        的大小来显示。因此，flexbox布局可以根据其内容自动调整元素的大小。
+
+在这个代码块中，flex-wrap属性被设置为wrap，这意味着如果子元素在水平方向上放置不下，它们将被包装到下一行。由于margin属性被设
+置为-12px，它会在子元素之间创建一个负边距，这样可以创造出间隙。这些因素结合起来，元素的大小将根据其内容和视口的大小而动态确定。*/
+
+
+
+        .blockCard {
+            padding: 12px;
+            position: relative;
+            opacity: 1;
+            min-width: 47.9%;
+
+        }
+
+        /*padding: 12px; 将给元素添加12像素的内边距，使元素的内容离边框有一定的距离。
+
+position: relative; 将元素的定位方式设置为相对定位，这意味着元素将相对于其正常位置进行定位。如果元素的位置属性被设置为top、right、
+bottom或left，则元素将相对于其相对定位的父元素进行定位。
+
+opacity: 1; 设置元素的不透明度为1，这意味着元素是完全不透明的。
+
+min-width: 47.9%; 设置元素的最小宽度为47.9%。这意味着元素的宽度不能小于该值，但可以根据内容自动增加到更大的宽度。如果父元素的宽度小于元素的
+最小宽度，则元素将溢出到父元素之外。*/
+        .inner {
+            text-align: left;
+            /*文本左对齐*/
+            margin: auto;
+            /*用于在元素的外边距上创建自动居中的效果*/
+            padding: 40px 32px 32px;
+            position: relative;
+            max-width: 490px;
+            min-height: 189px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, .04);
+            border-radius: 8px;
+        }
+
+        .inner>.h-text {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .h-text h3 {
+            margin: 0 10px;
+        }
+
+        .inner>div:nth-child(1) {
+            align-items: center;
+        }
+
+        .h-text>span>img {
+            width: 42px;
+        }
+
+        .inner h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .inner ol {
+            padding-left: 18px;
+        }
+
+        .inner li {
+            color: rgba(18, 20, 28, 0.5);
+        }
+
+        div.more {
+            justify-content: center;
+            margin-top: 80px;
+            display: flex;
+        }
+
+        div.more>a {
+            color: rgba(24, 24, 25, 0.7);
+            font-size: 15px;
+            width: 240px;
+            line-height: 60px;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid rgb(230, 231, 233);
+            border-radius: 70px;
+            outline: none;
+            text-decoration: none;
+            transition: 0.2s;
+            /*transition: 0.2s; 将元素的变换效果设置为0.2秒。*/
+        }
+
+        .more a:hover {
+            transform: translateY(-2px);
+            /*transform: translateY(-2px); 当鼠标悬停在按钮上时，将按钮向上移动2个像素。*/
+            color: #f85250;
+            border-color: #f85250;
+        }
+
+        .section-three {
+            background-color: rgb(248, 248, 250);
+            padding-top: 120px;
+            padding-bottom: 96px;
+        }
+
+        .section-three>div>h2 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        .section-three>div>p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 26px;
+            color: rgba(24, 24, 25, 0.42);
+        }
+
+        .project {
+            margin: 64px 0 0;
+            margin-top: 64px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .projectCard .cover {
+            display: none;
+            top: 0;
+            left: 0;
+        }
+
+        .projectCard:hover .cover {
+            display: flex;
+        }
+
+        .projectCard:hover .cover>div:hover {
+            color: rgb(244, 74, 83);
+        }
+
+
+
+        .projectCard {
+            padding: 24px;
+            padding-top: 24px;
+            padding-right: 24px;
+            padding-bottom: 24px;
+            padding-left: 24px;
+            margin: 0 24px 24px 0;
+            margin-top: 0px;
+            margin-right: 24px;
+            margin-bottom: 24px;
+            margin-left: 0px;
+            background-color: #fff;
+            display: block;
+            position: relative;
+            width: 344px;
+            height: 164px;
+            border-radius: 8px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            cursor: pointer;
+
+        }
+
+        .iconCard {
+            height: 64px;
+            min-width: 200px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .price-list-flex {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+
+        .price-card {
+            color: rgba(24, 24, 25, 0.7);
+            margin: 10px 40px 0;
+            display: flex;
+            max-width: 390px;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid rgb(253, 135, 54);
+            border-radius: 16px;
+            box-shadow: 0 8px 16px 0 rgb(253 122 67 / 8%);
+        }
+
+        .card-top {
+            background-image: linear-gradient(90deg, rgb(253, 106, 79), rgb(252, 158, 35));
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            width: 100%;
+            display: block;
+            transform: translateY(-1px);
+        }
+
+        .card-down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+
+        .card-down div {
+            min-height: 40px;
+        }
+
+        .price-content {
+            display: flex;
+            flex-direction: column;
+            margin: 24px 56px 0;
+        }
+
+        .card-down div {
+            min-height: 40px;
+        }
+
+        .price-button {
+            margin: 18px 24px;
+        }
+
+        .price {
+            padding: 120px 24px;
+            margin: auto;
+        }
+
+        .price-card:nth-child(2) .card-top {
+            background-image: linear-gradient(90deg, rgb(224, 234, 252), rgb(207, 222, 243));
+        }
+
+        .price-button a {
+            background-image: linear-gradient(90deg, rgb(224, 234, 252), rgb(207, 222, 243));
+            /*从左到右的颜色渐变*/
+            color: rgba(24, 24, 25, 0.7);
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 1000px;
+            /*border-radius: 1000px; 将链接元素的边框半径设置为 1000 像素，使其呈现圆形效果。*/
+            height: 40px;
+            line-height: 38px;
+            padding: 0 34px;
+        }
+
+        .price-button a:hover {
+            transform: translateY(-2px);
+        }
+
+        .wave {
+            background-image: url('http://8.130.16.253/985bbf24ed5f02ddf2a0.png');
+            background-repeat: no-repeat;
+            /*设置背景图片不重复，即只显示一次。*/
+            background-size: cover;
+            height: 120px;
+            width: 100%;
+        }
+
+        .footer {
+            background: rgb(24, 24, 25);
+            line-height: 23px;
+            font-size: 16px;
+            max-width: 100%;
+            color: white;
+        }
+
+        .content {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0 0 44px;
+            margin: 0 auto;
+            max-width: 1200px;
+            color: white;
+        }
+
+        .foot-flex:first-child,
+        .foot-flex:first-child h3 {
+            text-align: left;
+            padding: 0;
+        }
+
+        .foot-flex {
+            flex-basis: 25%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            max-width: 25%;
+            min-width: 300px;
+            height: 242px;
+            color: white;
+        }
+
+        .line-segment {
+            margin: 0 auto;
+            max-width: 1224px;
+            height: 1px;
+            max-height: 1px;
+            background-color: rgba(255, 255, 255, 0.32);
+        }
+
+        .foot-down {
+            margin: 0;
+            padding: 0 0 64px;
+            color: white;
+
+        }
+
+        .down-one {
+            margin: 64px 0 24px;
+        }
+
+        .down-two {
+            margin: 0;
+        }
+
+        .foot-flex div p a {
+            color: white;
+
+        }
+
+        .foot-down div a {
+            color: white;
+        }
