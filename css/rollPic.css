@@ -1,25 +1,37 @@
+.rollPic_list svg {
+	margin: 20px;
+	height: 64px;
+	width: 64px;
+	fill: gray;
+	margin-top: 350px;
+}
+
+.rollPic_list svg:hover {
+	fill: chocolate;
+}
 
 .rollPic_big {
 	margin: auto;
-	width: 1152px;
+	display: flex;
+	justify-content: center;
 	position: relative;
 	overflow: hidden;
 	box-sizing: border-box;
     border-radius: 10px;
 	height: 720px;
 	margin-bottom: 30px;
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 }
 
 .rollPic_list {
 	display: flex;
 	position: absolute;
-}
-
-.rollPic_list,
-.rollPic_list > li{
-	padding: 0;
-	margin: 0;
-	list-style:none; 
 }
 
 .rollPic,.rollPic>img{
@@ -34,6 +46,13 @@
 	margin: auto auto 80px;
 	box-sizing: border-box;
     border-radius: 5px;
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 }
 
 .small_list {
@@ -53,4 +72,55 @@
 	border-radius: 5px;
 }
 
+.rollPic_list rollPic {
+	background-color: #181819;
+}
+
+
+.disappear{
+	animation: moveA 0.5s 0s 1;
+}
+
+@keyframes moveA {
+	0% {
+		opacity: 1;
+	}
+
+	33% {
+		opacity: 0.7;
+	}
+
+	66% {
+		opacity: 0.5;
+	}
+
+	99% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.appear{
+	animation: moveB 0.5s 0s 1;
+}
+
+@keyframes moveB {
+	0% {
+		opacity: 0.3;
+	}
+
+	33% {
+		opacity: 0.6;
+	}
+
+	66% {
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
