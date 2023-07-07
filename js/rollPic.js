@@ -79,8 +79,6 @@ function autoRoll() {
     smallPics.item(jerry-1).setAttribute("style","border:5px solid chocolate;");
     auto = setInterval("autoRoll()", 2500);
 }
-
-//TODO 缩略图跳转
 smallPic.addEventListener("click",function (){
     clearInterval(auto);
     let src = window.event.target.src;
