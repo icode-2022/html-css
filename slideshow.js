@@ -1,8 +1,8 @@
-let left = document.querySelector(".left")
-let right = document.querySelector(".right")
-let small = document.querySelectorAll(".small")
-let images = document.querySelector(".big-img")
-let smallImg = document.querySelector(".small-img")
+const left = document.querySelector(".left")
+const right = document.querySelector(".right")
+const small = document.querySelectorAll(".small")
+const images = document.querySelector(".big-img")
+const smallImg = document.querySelector(".small-img")
 let index = 0
 let time
 function position() {
