@@ -75,7 +75,7 @@ a {
     left: 40%;
     transform: translate(-50%, 0);
     text-align: center;
-    z-index: 999;
+    z-index: 998;
     float: left;
     margin-left: 10%;
     margin-top: 60px;
@@ -99,6 +99,249 @@ a {
     margin-top: 24px;
     font-size: 14px;
     color: #5d5d5e;
+}
+
+/* 轮播图 */
+.slideshow {
+    width: 1244px;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.big-img {
+    width: 1500%;
+    height: 86%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.big {
+    width: 100%;
+    background-size: cover;
+}
+
+.left {
+    position: absolute;
+    top: 378px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #e6e7e9;
+    color: #ccc;
+    text-align: center;
+    line-height: 45px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.left:hover {
+    background-color: #c7c7d9cf;
+    color: #fff;
+}
+
+.right {
+    position: absolute;
+    top: 378px;
+    width: 45px;
+    height: 45px;
+    right: 0;
+    border-radius: 50%;
+    background-color: #e6e7e9;
+    color: #ccc;
+    text-align: center;
+    line-height: 45px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.right:hover {
+    background-color: #c7c7d9cf;
+    color: #fff;
+}
+
+.small-img {
+    list-style: none;
+    position: absolute;
+    width: 225%;
+    left: 0;
+    bottom: 5px;
+    right: 100px;
+    display: flex;
+}
+
+.small {
+    margin-left: 30px;
+    width: 144px;
+    height: 90px;
+    border: white solid 5px;
+    border-radius: 5px;
+    background-size: cover;
+    float: left;
+}
+
+.small:hover {
+    border: #cdbea5 solid 5px;
+}
+
+.small-img img {
+    width: 144px;
+    height: 90px;
+    border: #fff;
+}
+
+.small:nth-child(1) {
+    background-image: url(images/b1.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(2) {
+    background-image: url(images/b2.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(3) {
+    background-image: url(images/b3.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(4) {
+    background-image: url(images/b4.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(5) {
+    background-image: url(images/b5.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(6) {
+    background-image: url(images/b6.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(7) {
+    background-image: url(images/b7.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(8) {
+    background-image: url(images/b8.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(9) {
+    background-image: url(images/b9.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(10) {
+    background-image: url(images/b10.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(11) {
+    background-image: url(images/b11.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(12) {
+    background-image: url(images/b12.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(13) {
+    background-image: url(images/b13.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(14) {
+    background-image: url(images/b14.png);
+    border-radius: 10px;
+}
+
+.small:nth-child(15) {
+    background-image: url(images/b15.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(1) {
+    background-image: url(images/b1.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(2) {
+    background-image: url(images/b2.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(3) {
+    background-image: url(images/b3.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(4) {
+    background-image: url(images/b4.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(5) {
+    background-image: url(images/b5.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(6) {
+    background-image: url(images/b6.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(7) {
+    background-image: url(images/b7.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(8) {
+    background-image: url(images/b8.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(9) {
+    background-image: url(images/b9.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(10) {
+    background-image: url(images/b10.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(11) {
+    background-image: url(images/b11.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(12) {
+    background-image: url(images/b12.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(13) {
+    background-image: url(images/b13.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(14) {
+    background-image: url(images/b14.png);
+    border-radius: 10px;
+}
+
+.big:nth-child(15) {
+    background-image: url(images/b15.png);
+    border-radius: 10px;
 }
 
 /* Button */
