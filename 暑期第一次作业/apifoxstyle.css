@@ -1,0 +1,1006 @@
+a,
+div {
+    transition: .2s;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a::selection,
+/*用于自定义选择文本和元素的样式。这段代码指定了在选择文本和特定元素时的背景颜色和文字颜色。
+在这个例子中，被选择的文本和下列元素的背景颜色将变为#F85250，文字颜色将变为白色:*/
+img::selection,
+span::selection,
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+li::selection {
+    background: #F85250;
+    color: white;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    /*用于控制元素内容在水平方向上的溢出处理。当设置为 hidden 时，如果元素的内容超出了其容器的宽度，
+    那么超出部分将被隐藏，用户将无法水平滚动查看。而垂直方向上的滚动条则可以根据需要显示或隐藏*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.top {
+    max-width: 100%;
+    margin: auto;
+    width: 1244px;
+}
+
+.under {
+    max-width: 100%;
+    margin: auto;
+    width: 1244px;
+}
+
+.nav-box {
+    opacity: 0.9;
+    /*设置元素的透明度为0.9*/
+    backdrop-filter: blur(2px) contrast(100%);
+    /* 应用背景虚化和对比度调整效果于元素背景。*/
+    box-shadow: 0 2px 0 #F0F2F6;
+    /*设置元素的盒阴影，水平偏移量为0、垂直偏移量为2像素、模糊半径为0、阴影颜色*/
+    position: fixed;
+    /* 将元素的定位方式设置为固定定位，元素将相对于视口固定位置。*/
+    width: 100%;
+    background-color: #F0F2F6;
+    height: 60px;
+
+    z-index: 999;
+    /*设置元素的堆叠顺序为999，使该元素显示在其他元素之上。*/
+    max-width: 125%;
+}
+
+.nav {
+    position: absolute;
+    /*绝对定位*/
+    left: 50%;
+    transform: translateX(-50%);
+    /* 使用translateX变换将元素向左平移50%的宽度，以使元素的中心点与左侧边缘的中心点对齐*/
+    height: 60px;
+    max-width: 1400px;
+    width: 90%;
+
+}
+
+.nav_logo {
+    display: inline;
+    /*将元素的显示方式设置为内联。元素将与其他内联元素在同一行内显示。*/
+    position: absolute;
+    /*用于将元素相对于其最近被定位的父元素进行定位，而不是相对于文档
+    流中的其他元素进行定位。被绝对定位的元素会完全脱离文档流，并且可以使用top、bottom、left、right属性来确定元素在父元素中的位置。
+    height: 60px;
+    line-height: 58px;/*文本行与文本行之间的垂直间距*/
+    left: -5px;
+}
+
+.nav_right {
+    display: inline;
+    position: absolute;
+    height: 64px;
+    line-height: 62px;
+
+    left: 50%;
+    overflow: hidden;
+
+}
+
+.nav_logo>img {
+    vertical-align: middle;
+    /*将元素的垂直对齐方式设置为居中对齐。元素将在垂直方向上居中对齐。*/
+    display: inline-block;
+
+    width: 125px;
+    border-style: none;
+    /*将元素的边框样式设置为无边框。元素将没有边框呈现。*/
+}
+
+.nav_right a:hover {
+    color: #F85250;
+    border-bottom: #F85250 solid 3px;
+    padding-bottom: 16px;
+}
+
+/*.nav_right a:focus{*/
+/*    border-bottom:#F85250 solid ;*/
+/*}*/
+.nav_right>ul {
+    margin: 0;
+
+
+}
+
+.nav_right>ul li {
+    height: 64px;
+    margin: 0 21px;
+
+    float: left;
+    /*浮动*/
+    justify-content: center;
+    /*是用于弹性容器（display为 flex 或 inline-flex）的CSS属性，
+    用于指定其子元素在主轴上的对齐方式。*/
+}
+
+.nav_right>ul>li a {
+
+    color: #262626;
+    text-decoration: none;
+    /*用于移除文本的下划线效果。*/
+    font-size: 14px;
+}
+
+
+/*主体*/
+.container {
+    position: relative;
+    left: 40%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    float: left;
+    margin-left: 10%;
+    margin-top: 60px;
+}
+
+
+
+.download-version {
+    max-width: 330px;
+    text-align: left;
+    height: 288px;
+    display: none;
+    z-index: 1000;
+    width: 260px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /*设置了 box-sizing: border-box; 后，元素的宽度和高度将包括内边距和边框，而不会被它们撑开。*/
+    position: absolute;
+    top: 400px;
+    left: 48%;
+    transform: translate(-200px, 0);
+
+    box-shadow: 0 8px 32px rgb(0 0 0 / 4%);
+    /*这个属性在元素的周围创建一个阴影效果。属性的值由多个部分组成，
+    每个部分用空格分隔，表示阴影的水平偏移量、垂直偏移量、模糊半径、阴影颜色以及阴影颜色的不透明度。
+
+    解析这个属性值：
+    
+    0：表示阴影的水平偏移量为0。阴影不会在水平方向上产生偏移。
+    8px：表示阴影的垂直偏移量为8像素。阴影向下偏移8像素。
+    32px：表示阴影的模糊半径为32像素。模糊半径越大，阴影越模糊。
+    rgb(0 0 0 / 4%)：表示阴影的颜色为黑色（RGB值为0, 0, 0），且不透明度为4%。你可以根据需要自定义阴影的颜色和不透明度。*/
+}
+
+.download-version li {
+    font: 15px -apple-system;
+    color: #262626;
+    margin-left: -40px;
+    padding-left: 20px;
+    height: 30px;
+
+}
+
+.download-version li:hover {
+    background-color: #F5F5F5;
+}
+
+
+
+
+
+.header_H1 {
+    background-image: url("https://cdn.apifox.cn/www/assets/image/index/hero-bottom-bg.png");
+    background-repeat: no-repeat;
+    /* 表示背景图片不会在水平方向或垂直方向上重复。图片将只显示一次。*/
+    margin-top: 75px;
+}
+
+.header_H1>.header_title {
+    color: #000000;
+    font: 68px -apple-system, BlinkMacSystemFont;
+    margin: 0 0 16px;
+    padding: 0 0 11px;
+    font-family: sans-serif;
+    /*这个属性的值用于指定要在元素中使用的字体族名称。 sans-serif 表示要使用默认的无衬线字体族*/
+    font-weight: 600;
+}
+
+.header_H1>:nth-child(2) {
+    color: black;
+    margin: 0 0 12px;
+    padding: 11px 0 0;
+    font: 30px -apple-system, BlinkMacSystemFont;
+}
+
+.header_H1>:nth-child(3) {
+    color: #181819B3;
+    font: 14px -apple-system, BlinkMacSystemFont;
+    margin: 0 0 24px;
+    padding: 11px 0 0;
+}
+
+.button-area {
+    padding: 0 0 60px;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    flex-direction: row;
+    /*用于指定 flex 容器中子元素的排列方向。
+                         row 表示子元素将按行的方向进行排列*/
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.ant-dropdown-trigger {
+    padding: 12px 17px;
+    display: flex;
+}
+
+.button-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 17px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #ff387e 6.54%, #ff386d 21.35%, #f44a53 64.03%, #f35e3a 92.78%);
+}
+
+#ac {
+    display: none;
+
+    position: absolute;
+    background-color: #ff386d;
+    border: 1px solid #ff04a3;
+    width: 280px;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+    line-height: 1.1px;
+}
+
+/* 鼠标悬停时显示元素 */
+#ab:hover+#ac {
+    display: block;
+}
+
+.use-web {
+    background-color: white;
+    margin-left: 30px;
+    border-radius: 5px;
+    border: #F44A53 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 16px;
+    color: #F5646C;
+    cursor: pointer;
+    /*表示鼠标悬停在元素上时会显示一个手型光标，表示该元素是可点击的。*/
+}
+
+.use-web>p {
+    float: left;
+    margin: 11px 0;
+    width: 130px;
+}
+
+.button-web-beta {
+    border-color: #f44a53 #f44a53 transparent transparent;
+    border-top-right-radius: 5px;
+    border-style: solid;
+    border-width: 16px;
+    margin-left: -30px;
+    margin-bottom: 11.5px;
+}
+
+.button-web-beta-text {
+    transform: rotate(45deg);
+    /*用于对元素进行旋转变换。45*/
+    float: right;
+    color: white;
+    font: 12px -apple-system;
+    margin-bottom: 20px;
+    margin-left: -24px;
+}
+
+
+.small-img-shell {
+
+    position: absolute;
+
+    top: 86.5%;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    /*，用于指定如何适应元素内的替换元素（如 img、video 或 iframe）的尺寸。
+    具体来说， contain 表示替换元素会被等比缩放以适应容器，同时保持其宽高比，
+    使得整个替换元素都能够完全呈现在容器内部，不会超出容器的边界。*/
+}
+
+.small-img-list {
+
+    /*width: ;*/
+    display: flex;
+    /*父容器设置为flex布局，子元素可以灵活布局。*/
+    position: absolute;
+    /*绝对定位*/
+    width: 2100px;
+    transition: .2s;
+    /*添加了一个0.2秒的过渡效果，可以使导航栏的变化更加平滑。*/
+    height: 90px;
+    list-style: none;
+    /*去除导航栏的默认列表样式*/
+
+}
+
+.small-img {
+    transform: translateX(-57px);
+    margin-left: 15px;
+    width: 120px;
+    height: 70px;
+    border: white solid 5px;
+    border-radius: 5px;
+    background-size: cover;
+}
+
+/*功能*/
+.home-page {
+    z-index: -1;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.main-object {
+    float: left;
+    margin-bottom: 120px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /*用于控制Flex容器中的子项（flex items）在一行上是否换行，以及如何换行。
+
+    当设置为wrap时，子项会根据容器的宽度自动换行，使得它们能够适应容器的宽度。具体来说，当一行放不下所有的子项时，超出的子项会自动移到下一行显示。*/
+}
+
+.object-box {
+    width: 200px;
+}
+
+.object-box-iv {
+    opacity: 0;
+    /*透明度*/
+    position: absolute;
+    display: flex;
+    width: 220px;
+    transform: translateX(-5px);
+    color: #8C8C8C;
+    font-size: 9px;
+    height: 50px;
+    border-radius: 5px;
+
+}
+
+.object-box-iv span:nth-child(1) {
+    transform: translateY(22px);
+}
+
+.object-box-iv:hover {
+    opacity: 1;
+    /*color: #F5535C;*/
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.object-box-iv-cl:hover {
+    color: #F5535C;
+}
+
+.object-box-iv div span:nth-child(1) {
+    font-size: 20px;
+    margin-top: -4px;
+}
+
+/*.object-box-iv:nth-child(2),*/
+/*.object-box-iv:nth-child(3),*/
+/*.object-box-iv:nth-child(4){*/
+/*    transform: translateX(38px);*/
+/*}*/
+.main-object img {
+    width: 48px;
+    height: 48px;
+    vertical-align: center;
+    /*元素的垂直对齐方式为居中对齐。*/
+    margin-left: 26px;
+}
+
+.main-object div {
+    text-align: center;
+    flex-grow: 0.2;
+    /*用于定义Flex容器中的子项（flex items）相对于其他子项的放大比例。*/
+    cursor: pointer;
+    display: flex;
+    margin: 0 5px;
+}
+
+.main-object span:nth-child(2) {
+    margin-top: 15px;
+    margin-left: 5px;
+    font: 18px -apple-system;
+}
+
+.header_title2 {
+    /*margin-top: 150px;*/
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small-icon {
+    font-size: 38px;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.detail-box {
+    padding: 40px 20px 32px;
+    vertical-align: baseline;
+    /*用于指定元素在垂直方向上相对于父元素或行内内容的基线对齐方式。*/
+    background: #ffffff;
+    box-shadow: 0 8px 32px rgb(0 0 0 / 4%);
+    border-radius: 8px;
+
+    margin: 35px 50px;
+    width: 470px;
+
+    /*阴影*/
+    /*filter: drop-shadow(*/
+    /*        1px 3px 9px hsl(220deg 60% 50%)*/
+    /*);*/
+}
+
+.detail-box span {
+    margin-left: 40px;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: -11px;
+}
+
+.detail-box h3 {
+    margin-bottom: -20px;
+    transform: translate(25px, -28px);
+    color: black;
+    font: 20.8px -apple-system;
+}
+
+.detail-box li {
+    color: #12141C80;
+    font: 14px -apple-system;
+}
+
+.learn-more {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto;
+    position: relative;
+    z-index: 980;
+}
+
+.learn-more a {
+    transform: translateY(0);
+    transition: transform 0.2s;
+    padding-left: 8px;
+    color: rgba(24, 24, 25, 0.7);
+    border: 1px solid #e6e7e9;
+    border-radius: 70px;
+    font-size: 15px;
+    width: 240px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.learn-more a:hover {
+    color: #F85250;
+    border: 1px solid #F85250;
+    transform: translateY(-4px);
+}
+
+
+
+.apihub-wrapper {
+    position: relative;
+    width: 100%;
+    margin: auto;
+
+    background: #f8f8fa;
+
+    padding: 120px 0 96px;
+    flex-wrap: wrap;
+
+}
+
+.apihub-title h2 {
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.apihub-title p {
+    height: 26px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: rgba(24, 24, 25, .42);
+    margin-bottom: 0;
+}
+
+.apihub-title {
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+.apihub-card-wrapper {
+    display: flex;
+    flex-grow: 0.3;
+    /*用于定义Flex容器中子项的放大比例和自动换行。*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.api-card {
+    max-height: 212px;
+    width: 310px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.api-card:hover .invisible {
+    z-index: 22;
+}
+
+.visible-title {
+    display: inline-block;
+    color: #181819;
+    font: 18px -apple-system;
+}
+
+.visible-title span {
+    float: left;
+}
+
+.visible-title span:nth-child(2) {
+    float: left;
+    margin-top: 15px;
+
+}
+
+.visible-title img {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    object-fit: cover;
+    /*针对替换元素的内容适应性进行设置的。它控制替换元素在容器中的尺寸调整和裁剪行为，以确保元素的内容尽可能地填充容器。
+
+    当设置 object-fit: cover; 时，替换元素的内容会被拉伸或缩放，以便完全填充其容器，并保持其原始的宽高比。
+    如果内容的宽高比与容器的宽高比不匹配，则会进行裁剪，以适应容器的尺寸，并保持内容的完整性。
+    font-size: 18px;
+    margin-right: 16px;
+    outline: 1px solid #f8f8f6;*/
+}
+
+.visible-description {
+    display: block;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px;
+    height: 54px;
+    color: rgba(24, 24, 25, .42);
+    margin-bottom: 26px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /*用于指定Flex容器中的排列方向。当设置为 vertical 时，文本将按垂直方向从上到下排列*/
+    -webkit-line-clamp: 2;
+    /*于限制文本在容器中的行数。通过设置一个整数值作为参数，可以限制文本显示为指定行数。
+    ，-webkit-line-clamp: 2; 表示只显示容器中的前两行文本，并将超出的部分以省略号表示。*/
+    overflow: hidden;
+}
+
+.visible div:nth-child(3) {
+    color: rgba(24, 24, 25, .42);
+    font-size: 16px;
+}
+
+.visible div:nth-child(3) span:nth-child(3),
+.visible div:nth-child(3) span:nth-child(1) {
+    font-size: 24px;
+}
+
+.visible div:nth-child(3) span:nth-child(3) {
+    margin-left: 30px;
+}
+
+.invisible {
+    transition: 0s;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 65px;
+    margin: -193px 0 30px -25px;
+    position: absolute;
+    border-radius: 10px;
+    z-index: -1;
+    display: flex;
+    flex-grow: 0.5;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    color: #666666;
+    font-size: 14px;
+    padding: 75px 0;
+}
+
+.invisible span {
+    font-size: 30px;
+}
+
+.invisible-left {
+    padding: 75px 0;
+    margin: -75px 0;
+    width: 50%;
+    border-right: #F7F7F7 solid 1px;
+}
+
+.invisible-left:hover {
+    color: #F5535C;
+}
+
+.invisible-right:hover {
+    color: #F5535C;
+}
+
+.invisible-right {
+    padding: 75px 0;
+    margin: -75px 0;
+    width: 50%;
+    border-left: #F7F7F7 solid 1px;
+}
+
+.invisible span img {
+    width: 30px;
+}
+
+
+.browse-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.browse-more div div {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #181819;
+    margin-right: 14px;
+}
+
+.browse-more:hover {
+    box-shadow: 2px 4px 8px #999999;
+}
+
+
+
+
+
+.who-use {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background: #ffffff;
+}
+
+.who-use h1 {
+    margin-top: 80px;
+    margin-bottom: .5em;
+    color: rgba(0, 0, 0, .85);
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 1.23;
+}
+
+.who-use span {
+    display: block;
+    color: rgba(0, 0, 0, .45);
+    overflow-wrap: break-word;
+}
+
+.who-use img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 48px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.who-use span:nth-child(2) {
+    font: 14px -apple-system;
+    margin-top: 20px;
+    color: rgba(41, 45, 52, .32);
+    display: block;
+}
+
+.price {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    text-align: center;
+}
+
+.price h2 {
+    font: 36px -apple-system;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.price-box {
+    display: flex;
+}
+
+.price-box1,
+.price-box2 {
+    width: 400px;
+    background: linear-gradient(90deg,
+            rgba(253, 106, 79, .02), rgba(252, 158, 35, .02));
+    box-shadow: 0 8px 16px rgb(253 122 67 / 8%);
+    margin: 0 45px;
+    border-radius: 16px;
+}
+
+.price-box1 div:nth-child(1) {
+    background: linear-gradient(90deg, #fd6a4f, #fc9e23);
+    height: 124px;
+    margin-top: -22px;
+    border-radius: 16px 16px 0 0;
+}
+
+.price-box1 div:nth-child(1) h1 {
+    border: none;
+    color: #fff;
+    padding-top: 24px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 45px;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+
+.price-box1 div:nth-child(1) span {
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.price-box1 li,
+.price-box2 li {
+    text-align: left;
+    margin: 15px 0 15px 34%;
+    color: #181819B3;
+    font-size: 17px;
+}
+
+.price-box1 li span:nth-child(1),
+.price-box2 li span:nth-child(1) {
+    font-size: 19px;
+    margin-right: 15px;
+}
+
+.price-box1 p span:nth-child(1),
+.price-box2 p span:nth-child(1) {
+    width: 16px;
+    height: 16px;
+}
+
+.price-box1 input {
+    background-image: linear-gradient(90deg, #fd6a4f, #fc9e23);
+    transform: translateY(0);
+    transition: transform .2s;
+    padding: 0 24px;
+    border-radius: 1000px;
+    width: 128px;
+    height: 40px;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+}
+
+input[type=button]:hover {
+    transform: translateY(-3px);
+
+}
+
+/*2*/
+.price-box2 div:nth-child(1) {
+    background: linear-gradient(90deg, #e0eafc, #cfdef3);
+    width: 100%;
+    height: 124px;
+    margin-top: -22px;
+    border-radius: 16px 16px 0 0;
+}
+
+.price-box2 h1 {
+    border: none;
+    color: #181819B3;
+    padding-top: 24px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 45px;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+
+.price-box2 div:nth-child(1) span {
+    border: none;
+    color: #181819B3;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.price-box2 input {
+    background-image: linear-gradient(90deg, #e0eafc, #cfdef3);
+    transform: translateY(0);
+    transition: transform .2s;
+    padding: 0 24px;
+    border-radius: 1000px;
+    width: 128px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+
+.wavy {
+    background: url(波浪.png);
+    position: relative;
+    background-size: cover;
+    height: 120px;
+}
+
+.footer {
+    background: #181819;
+    display: block;
+    padding: 0 0 40px 0;
+}
+
+.footer div:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0 44px;
+    height: 100%;
+    max-width: 1244px;
+    position: relative;
+    margin: auto;
+    will-change: transform;
+}
+
+.block1,
+.block2 {
+    /*flex: 0 1 250px;*/
+    padding: 0;
+    line-height: 23px;
+    font-size: 16px;
+    margin: 0;
+    /*flex-direction: column;*/
+    /*display: flex;*/
+    /*align-items: baseline;*/
+    flex-grow: 0.25;
+}
+
+.block1 {
+    transform: translateY(-80px);
+}
+
+.block1 img {
+    transform: translateX(-95px);
+    width: 110px;
+    height: auto;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.block1 p {
+    position: absolute;
+    color: #999999;
+    font: 16px -apple-system;
+    margin-top: 50px;
+}
+
+.block2>h3 {
+    margin-top: -5px;
+    margin-bottom: 24px;
+    color: #ffffff;
+
+    transform: translateX(104px);
+}
+
+.block2 a {
+    display: block;
+    transform: translateX(104px);
+    /*float: left;*/
+    /*clear: both;*/
+    margin-bottom: 16px;
+    color: hsla(0, 0%, 100%, .7);
+    font-weight: 400;
+}
+
+.divider {
+    width: 100%;
+    border: #626263 solid 1px;
+}
+
+.friend-link {
+    width: 100%;
+    color: #999999;
+    font-size: 16px;
+    margin-top: 64px;
+    margin-bottom: 24px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.friend-link a {
+    margin-left: 16px;
+    font-style: normal;
+    color: #999999;
+}
